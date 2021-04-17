@@ -44,8 +44,9 @@ class CompanyTest extends Command
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $output->writeln('<info>Testing Companies.</info>');
-        $repo = $this->objectManager->get('Devall\Tabatadze\Model\Company');
-        $company = $repo->getById(1);
+        $repo = $this->objectManager->get('Devall\Tabatadze\Model\CompanyRepository');
+        $object = $repo->companyFactory->create();
+        $object->load(1);
         $output->writeln('<info>Testing Companies again.</info>');
     }
 }

@@ -14,6 +14,18 @@ class Company extends AbstractModel implements CompanyInterface
     {
          $this->_init(\Devall\Tabatadze\Model\ResourceModel\Company::class);
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function getId()
+    {
+        return parent::getData(self::ENTITY_ID);
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function getName()
     {
         return $this->_getData(self::NAME);

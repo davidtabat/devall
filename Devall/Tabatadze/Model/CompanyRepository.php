@@ -17,7 +17,7 @@ class CompanyRepository implements CompanyRepositoryInterface
     /**
      * @var CompanyFactory
      */
-    private $companyFactory;
+    public $companyFactory;
 
     /**
      * @var CompanyCollectionFactory
@@ -94,4 +94,5 @@ class CompanyRepository implements CompanyRepositoryInterface
 
         return $searchResults;
     }
+
 }
