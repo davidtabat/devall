@@ -1,15 +1,10 @@
 <?php
-/**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
-
-/** @var \Devall\Tabatadze\Model\CompanyRepository $block */
+/** @var \Devall\Tabatadze\Block\Account\Dashboard\CompanyBlock $block */
 ?>
 <div class="block block-dashboard-company">
     <div class="block-title">
         <strong><?= $block->escapeHtml(__('Company Information')) ?></strong>
-        <a class="action edit" href="<?= $block->escapeUrl($block->getCompanyEditUrl()) ?>"><span><?= $block->escapeHtml(__('Change Associated Company')) ?></span></a>
+        <a class="action edit" href="<?= $block->escapeUrl($block->getCompanyEditUrl() ) ?>"><span><?= $block->escapeHtml(__('Change Associated Company')) ?></span></a>
 
     </div>
     <div class="block-content">

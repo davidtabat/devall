@@ -1,9 +1,7 @@
 <?php
-
-/** @var \Devall\Tabatadze\Model\CompanyRepository $block */
 /** @var \Devall\Tabatadze\Block\CompanyList $block */
 
-        $companies = $block->getCompanies();
+$companies = $block->getCompanies();
 ?>
 <form method="post" id="companyform" action="<?= $block->escapeUrl($block->getAction()) ?>" >
         <?= $block->getBlockHtml('formkey') ?>

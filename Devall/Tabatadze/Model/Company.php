@@ -1,8 +1,5 @@
 <?php
-
-
 namespace Devall\Tabatadze\Model;
-
 
 use Devall\Tabatadze\Api\Data\CompanyInterface;
 use Magento\Framework\Model\AbstractModel;
