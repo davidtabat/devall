@@ -5,7 +5,7 @@ $companies = $block->getCompanies();
 ?>
 <form method="post" id="companyform" action="<?= $block->escapeUrl($block->getAction()) ?>" >
         <?= $block->getBlockHtml('formkey') ?>
-            <select form="companyform" name="company" id="company">
+            <select name="company" id="company">
                 <?php foreach ($companies as $company): ?>
                     <option value="<?=$company->getId() ?>"  <?php if ($company->getId() == $block->compareCompany()): ?> selected <?php endif; ?>>
                         <?= $company->getName()?>
