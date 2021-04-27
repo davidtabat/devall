@@ -1,13 +1,5 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-    <type name="Magento\Framework\Console\CommandListInterface">
-        <arguments>
-            <argument name="commands" xsi:type="array">
-                <item name="companymodule_test" xsi:type="object">Devall\Tabatadze\Console\Command\CompanyTest</item>
-                <item name="companyattributeadd" xsi:type="object">Devall\Tabatadze\Console\Command\CompnayAttributeAdd</item>
-            </argument>
-        </arguments>
-    </type>
     <preference for="Devall\Tabatadze\Api\CompanyRepositoryInterface" type="Devall\Tabatadze\Model\CompanyRepository"/>
     <preference for="Devall\Tabatadze\Api\Data\CompanyInterface" type="Devall\Tabatadze\Model\Company"/>
 </config>

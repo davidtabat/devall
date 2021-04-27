@@ -11,6 +11,7 @@ class Company extends AbstractModel implements CompanyInterface
     const COUNTRY = 'country';
     const STREET = 'street';
     const NUMBER = 'street_number';
+    const COMPANY_SIZE = 'size';
     protected function _construct()
     {
          $this->_init(\Devall\Tabatadze\Model\ResourceModel\Company::class);
@@ -54,5 +55,13 @@ class Company extends AbstractModel implements CompanyInterface
     public function getNumber()
     {
         return $this->_getData(self::NUMBER);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getCompanySize()
+    {
+        return $this->_getData(self::COMPANY_SIZE);
     }
 }

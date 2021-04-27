@@ -64,4 +64,13 @@ class CompanyList extends Template
         }
         return false;
     }
+
+    public function getCompany(){
+        $customerId = $this->getCustomerId();
+        $customer = $this->customer->load($customerId);
+        $customerData = $customer->getDataModel();
+        $companyId = $customerData->getCustomAttribute('customer_pan_number')->getValue();
+        $company = $this->companyRepository->getById($companyId);
+        return $company;
+    }
 }

@@ -28,4 +28,9 @@ interface CompanyInterface
      * @return string
      */
     public function getNumber();
+
+    /**
+     * @return int
+     */
+    public function getCompanySize();
 }
