@@ -2,9 +2,9 @@ define([
     'uiComponent',
     'ko',
     'jquery'
-], function(Component, ko, $) {
-        return Component.extend({
-        initialize: function(config) {
+], function (Component, ko, $) {
+    return Component.extend({
+        initialize: function (config) {
             var feature = this;
             this._super();
             this.country(config.countrycompany);
@@ -15,12 +15,16 @@ define([
                 var valueSelected = this.value - 1;
                 ourAsyncFunction(valueSelected);
             });
-            async function ourAsyncFunction(id){
-                $.ajax({url: "/rest/V1/devall_company/", success: function(result){
+
+            async function ourAsyncFunction(id) {
+                $.ajax({
+                    url: "/rest/V1/devall_company/", success: function (result) {
                         setCompanyDetails(result[id]);
-                    }});
+                    }
+                });
             }
-            function setCompanyDetails(details){
+
+            function setCompanyDetails(details) {
                 feature.country(details.country);
                 feature.street(details.street);
                 feature.streetNum(details.street_number);
